@@ -1,0 +1,12 @@
+# PDF Reading Libraries
+# Install with: pip install -r requirements_pdf.txt
+
+# Best for complex layouts and tables
+pdfplumber>=0.10.0
+
+# Alternative: Fast and comprehensive
+pymupdf>=1.23.0
+
+# Alternative: Basic PDF reading
+PyPDF2>=3.0.0
+

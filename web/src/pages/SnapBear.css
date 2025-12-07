@@ -1,0 +1,530 @@
+.snapbear-page {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.snapbear-hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem 4rem;
+  overflow: hidden;
+}
+
+.snapbear-hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.snapbear-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, var(--primary-soft) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.snapbear-hero-container {
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.snapbear-hero-content {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.snapbear-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.snapbear-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--text);
+  letter-spacing: -2px;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.snapbear-tagline {
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  color: var(--text);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.snapbear-description {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.snapbear-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.snapbear-cta-primary,
+.snapbear-cta-secondary {
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.snapbear-cta-primary {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  box-shadow: 0 4px 20px rgba(124, 77, 255, 0.3);
+}
+
+.snapbear-cta-primary:hover {
+  box-shadow: 0 6px 30px rgba(124, 77, 255, 0.5);
+}
+
+.snapbear-cta-secondary {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.snapbear-cta-secondary:hover {
+  border-color: var(--primary);
+  background: var(--card-elevated);
+}
+
+/* Video in Benefits Section */
+.snapbear-video-container {
+  position: relative;
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.snapbear-video-container:hover {
+  border-color: var(--primary);
+  box-shadow: 0 25px 70px rgba(124, 77, 255, 0.4);
+  transform: translateY(-5px);
+}
+
+.snapbear-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 24px;
+}
+
+/* Features Section */
+.snapbear-features {
+  padding: 8rem 2rem;
+  background: var(--bg-alt);
+  position: relative;
+}
+
+.snapbear-features::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+}
+
+.snapbear-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.snapbear-section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.snapbear-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.snapbear-feature-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 2.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.snapbear-feature-card:hover {
+  border-color: var(--primary);
+  background: var(--card-elevated);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.feature-icon-large {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  filter: grayscale(0.3);
+  transition: filter 0.3s ease;
+}
+
+.snapbear-feature-card:hover .feature-icon-large {
+  filter: grayscale(0);
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.feature-description {
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* Benefits Section */
+.snapbear-benefits {
+  padding: 8rem 2rem;
+  background: var(--bg);
+  position: relative;
+}
+
+.snapbear-benefits::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+}
+
+.snapbear-benefits-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.benefits-list {
+  list-style: none;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.benefits-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-muted);
+  font-size: 1.125rem;
+}
+
+.benefit-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: var(--primary-soft);
+  border-radius: 50%;
+  color: var(--primary);
+  font-size: 1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.snapbear-benefits-cta {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(124, 77, 255, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.snapbear-benefits-cta:hover {
+  box-shadow: 0 6px 30px rgba(124, 77, 255, 0.5);
+}
+
+.snapbear-benefits-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.snapbear-visual-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.visual-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.visual-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.visual-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--border);
+}
+
+.visual-dots span:nth-child(1) {
+  background: var(--danger);
+}
+
+.visual-dots span:nth-child(2) {
+  background: var(--warning);
+}
+
+.visual-dots span:nth-child(3) {
+  background: var(--success);
+}
+
+.visual-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.visual-post {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.post-line {
+  height: 12px;
+  background: linear-gradient(90deg, var(--primary-soft), var(--accent-soft));
+  border-radius: 6px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.post-line:nth-child(1) {
+  width: 100%;
+}
+
+.post-line:nth-child(2) {
+  width: 80%;
+  animation-delay: 0.3s;
+}
+
+.post-line.short {
+  width: 60%;
+  animation-delay: 0.6s;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* CTA Section */
+.snapbear-cta-section {
+  padding: 8rem 2rem;
+  background: var(--bg-alt);
+  position: relative;
+}
+
+.snapbear-cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+}
+
+.snapbear-cta-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.snapbear-cta-title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--text);
+  letter-spacing: -1px;
+}
+
+.snapbear-cta-description {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+
+.snapbear-cta-button {
+  padding: 1.25rem 2.5rem;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(124, 77, 255, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.snapbear-cta-button:hover {
+  box-shadow: 0 6px 30px rgba(124, 77, 255, 0.5);
+}
+
+@media (max-width: 968px) {
+  .snapbear-benefits-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .snapbear-benefits-visual {
+    order: -1;
+  }
+
+  .snapbear-features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .snapbear-hero {
+    padding: 6rem 1.5rem 3rem;
+  }
+
+  .snapbear-features,
+  .snapbear-benefits,
+  .snapbear-cta-section {
+    padding: 6rem 1.5rem;
+  }
+
+  .snapbear-feature-card {
+    padding: 2rem;
+  }
+
+  .snapbear-video-container {
+    border-radius: 16px;
+  }
+
+  .snapbear-video {
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .snapbear-hero {
+    padding: 5rem 1rem 2rem;
+  }
+
+  .snapbear-title {
+    font-size: 2.5rem;
+  }
+
+  .snapbear-features,
+  .snapbear-benefits,
+  .snapbear-cta-section {
+    padding: 5rem 1rem;
+  }
+
+  .snapbear-feature-card {
+    padding: 1.5rem;
+  }
+
+  .snapbear-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .snapbear-cta-primary,
+  .snapbear-cta-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
